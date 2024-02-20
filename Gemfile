@@ -22,11 +22,12 @@ gem "turbo-rails"
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
-
+gem "jquery-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
-gem 'materialize-sass', '~> 1.0.0'
-  gem 'material_icons' 
+#gem 'materialize-sass', '~> 1.0.0'
+  gem 'material_icons'
+  gem "materialize-sass", git: "https://github.com/Joaquinb2000/materialize-sass-rails-7.git"
 gem "sassc-rails"
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"

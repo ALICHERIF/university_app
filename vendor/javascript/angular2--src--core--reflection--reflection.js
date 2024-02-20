@@ -1,0 +1,2 @@
+import"angular2/src/facade/lang";import"angular2/src/facade/exceptions";import"angular2/src/facade/collection";import"./reflector_reader.js";import e from"./reflector.js";import r from"./reflection_capabilities.js";"use strict";var o={};var t=e;var c=e;o.Reflector=c.Reflector;o.ReflectionInfo=c.ReflectionInfo;var a=r;o.reflector=new t.Reflector(new a.ReflectionCapabilities);const f=o.Reflector,l=o.ReflectionInfo,i=o.reflector;export default o;export{l as ReflectionInfo,f as Reflector,i as reflector};
+
