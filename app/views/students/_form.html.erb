@@ -1,0 +1,39 @@
+<%= render 'shared/errors', obj: @student %>
+<div class="container">
+  <div class="sign-up-form">
+
+  <div class="card-panel">
+    <div class="col s12 m12 l12">
+
+
+<h3 class="header"> <center><%= @student.new_record? ? "Sign up" : "edit" %></center></h3>
+
+    <div class="row">
+      <%= form_for @student, html: { class: "col s12" } do |f| %>
+        <div class="row">
+          <div class="input-field col s12">
+            <%= f.text_field :name, id: "name" %>
+            <%= f.label :name %>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <%= f.email_field :email, id: "email" %>
+            <%= f.label :email %>
+          </div>
+        </div>
+
+        <div class="row">
+       <div class="col s12 center-align">
+         <button class="btn waves-effect waves-light" type="submit" name="action"><%= @student.new_record? ? "Submit" : "edit" %>
+           <i class="material-icons right">send</i>
+         </button>
+       </div>
+     </div>
+      <% end %>
+      </div>
+</div>
+  </div>
+</div>
+</div>
