@@ -18,7 +18,7 @@
           <%= yield %>
     </div>
 </main>
-    <%= render 'layouts/footer' %>      
+    <%= render 'layouts/footer' %>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
@@ -31,6 +31,7 @@
                                         $('.sidenav').sidenav();
                                         $('.collapsible').collapsible();
                                         $(".dropdown-trigger").dropdown({ hover: true });
+                                          $('#fade-out-target').fadeOut(4000);
                                       });
                                     </script>
 </body>

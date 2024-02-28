@@ -30,5 +30,22 @@
       </div>
       </div>
     </nav>
+    <div class="container">
+
+
+    <div id="error_explanation" class="white-text text-darken-2">
+  <div class="col s12 m12 l12">
+        <div class="card-panel red lighten-2" id="fade-out-target">
+
+
+  <% flash.each do |name, msg| %>
+
+          <%= msg %>
+
+  <% end %>
+</div>
+</div>
+</div>
+    </div>
 
     </header>
