@@ -30,6 +30,22 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 <script>
+  // Get the element with the ID "fade-out-target"
+ var element = document.getElementById('fade-out-target');
+  // Define a function to fade out the element
+  function fadeOut() {
+    // Reduce the opacity of the element gradually
+    var opacity = 1;
+    var intervalId = setInterval(function() {
+      if (opacity > 0) {
+        opacity -= 0.1; // Decrease opacity by 0.1
+        element.style.opacity = opacity;
+      } else {
+        clearInterval(intervalId); // Stop the fading animation
+        element.style.display = 'none'; // Hide the element when fading is complete
+      }
+    }, 100); // Run the fading animation every 100 milliseconds
+  }
 // Initialize dropdown
 document.addEventListener('DOMContentLoaded', function() {
 var elems = document.querySelectorAll('.dropdown-trigger');
@@ -41,23 +57,9 @@ var instances = M.Dropdown.init(elems);
    var elems = document.querySelectorAll('.sidenav');
    var instances = M.Sidenav.init(elems);
  });
- // Get the element with the ID "fade-out-target"
-var element = document.getElementById('fade-out-target');
 
-// Define a function to fade out the element
-function fadeOut() {
-  // Reduce the opacity of the element gradually
-  var opacity = 1;
-  var intervalId = setInterval(function() {
-    if (opacity > 0) {
-      opacity -= 0.1; // Decrease opacity by 0.1
-      element.style.opacity = opacity;
-    } else {
-      clearInterval(intervalId); // Stop the fading animation
-      element.style.display = 'none'; // Hide the element when fading is complete
-    }
-  }, 100); // Run the fading animation every 100 milliseconds
-}
+
+
 
 // Call the fadeOut function after a delay of 1000 milliseconds (1 second)
 setTimeout(fadeOut, 4000);
