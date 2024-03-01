@@ -14,4 +14,6 @@ resources :students, except: [:destroy]
 get "login", to: 'logins#new'
 post "login", to: 'logins#create'
 get 'logout', to: 'logins#destroy'
+#get 'course_enroll', to: 'student_courses#new'
+post 'course_enroll', to: 'student_courses#create'
 end
